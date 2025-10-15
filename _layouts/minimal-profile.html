@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ site.name }}</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 </head>
 <body>
@@ -14,7 +15,28 @@
       {% if site.title %}
       <p class="subtitle">{{ site.title }}</p>
       {% endif %}
+
+      <!-- Social Links -->
+      <div class="social-links">
+        {% if site.email %}
+        <a href="mailto:{{ site.email }}" aria-label="Email" class="social-link">
+          <i class="fas fa-envelope"></i>
+        </a>
+        {% endif %}
+        {% if site.github_username %}
+        <a href="https://github.com/{{ site.github_username }}" target="_blank" aria-label="GitHub" class="social-link">
+          <i class="fab fa-github"></i>
+        </a>
+        {% endif %}
+        {% if site.linkedin_username %}
+        <a href="https://linkedin.com/in/{{ site.linkedin_username }}" target="_blank" aria-label="LinkedIn" class="social-link">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        {% endif %}
+      </div>
     </header>
+
+    <hr class="section-divider">
 
     <!-- About Section -->
     {% if site.about_content %}
@@ -63,22 +85,6 @@
     <hr class="section-divider">
     {% endunless %}
     {% endfor %}
-
-    <!-- Contact Links -->
-    <section class="content-section contact-section">
-      <h2 class="section-title">Connect</h2>
-      <div class="contact-links">
-        {% if site.email %}
-        <a href="mailto:{{ site.email }}">Email</a>
-        {% endif %}
-        {% if site.github_username %}
-        <a href="https://github.com/{{ site.github_username }}" target="_blank">GitHub</a>
-        {% endif %}
-        {% if site.linkedin_username %}
-        <a href="https://linkedin.com/in/{{ site.linkedin_username }}" target="_blank">LinkedIn</a>
-        {% endif %}
-      </div>
-    </section>
   </div>
 </body>
 </html>
