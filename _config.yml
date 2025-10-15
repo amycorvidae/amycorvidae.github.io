@@ -1,0 +1,110 @@
+# Site
+repository: amycorvidae/amycorvidae.github.io
+# favicon: images/favicon.ico
+
+# Content configuration version
+version: 2
+
+# Personal info
+name: Amy R. Corvidae
+title: Senior Software Engineer at MasterControl
+email: amycorvidae@gmail.com
+# phone: Your phone number (optional)
+website: https://amycorvidae.github.io
+
+# Dark Mode (true/false/never)
+darkmode: false
+
+# Social links
+# twitter_username: yourusername
+github_username: amycorvidae
+# stackoverflow_username: "00000001"
+linkedin_username: amycorvidae
+# instagram_username: yourusername
+
+# Additional icon links
+# additional_links:
+# - title: Portfolio
+#   icon: fas fa-globe
+#   url: https://yourportfolio.com
+
+# About Section
+# about_title: About Me
+about_profile_image: images/profilepicture.jpg
+about_content: |
+  Write an awesome description about yourself here. This section supports **markdown**, so you can make things *italic* or **bold**.
+
+  You can write multiple paragraphs here. Tell people about your skills, interests, and what makes you unique.
+
+content:
+  - title: Experience
+    layout: list
+    content:
+      - layout: left
+        title: Company Name
+        sub_title: Job Title
+        caption: Date Range
+        link: company-website.com
+        quote: >
+          Short description of the company (optional)
+        description: |
+          Describe your role and responsibilities here. You can use markdown:
+          - Bullet point 1
+          - Bullet point 2
+          - Bullet point 3
+
+  - title: Education
+    layout: list
+    content:
+      - layout: left
+        title: Institution Name
+        caption: Graduation Year
+        sub_title: Degree/Qualification
+        quote: >
+          Short institution description (optional)
+        description: |
+          Describe your studies, achievements, or notable coursework.
+
+  - title: Skills
+    layout: text
+    content: |
+      List your skills here. You can format this however you like:
+
+      - **Programming Languages:** Python, JavaScript, etc.
+      - **Tools & Technologies:** Git, Docker, etc.
+      - **Other Skills:** Communication, Leadership, etc.
+
+  - title: A Little More About Me
+    layout: text
+    content: |
+      This section can include hobbies, interests, or anything else you'd like to share.
+
+      When I'm not coding, you can find me:
+      - Interest 1
+      - Interest 2
+      - Interest 3
+
+# Footer
+footer_show_references: true
+
+# Build settings
+remote_theme: sproogen/modern-resume-theme
+
+sass:
+  sass_dir: _sass
+  style: compressed
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-remote-theme
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .bundle
+  - .sass-cache
+  - .jekyll-cache
+  - gemfiles
+  - README.md
