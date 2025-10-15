@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ site.name }}</title>
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+<body>
+  <div class="container">
+    <!-- Header / Name -->
+    <header class="header-section">
+      <h1>{{ site.name }}</h1>
+      {% if site.title %}
+      <p class="subtitle">{{ site.title }}</p>
+      {% endif %}
+    </header>
+
+    <!-- About Section -->
+    {% if site.about_content %}
+    <section class="content-section">
+      {{ site.about_content | markdownify }}
+    </section>
+    <hr class="section-divider">
+    {% endif %}
+
+    <!-- Dynamic Content Sections -->
+    {% for section in site.content %}
+    <section class="content-section">
+      <h2 class="section-title">{{ section.title }}</h2>
+
+      {% if section.layout == "list" %}
+        {% for item in section.content %}
+        <div class="list-item">
+          <h3 class="item-title">{{ item.title }}</h3>
+          {% if item.sub_title %}
+          <p class="item-subtitle">{{ item.sub_title }}</p>
+          {% endif %}
+          {% if item.caption %}
+          <p class="item-caption">{{ item.caption }}</p>
+          {% endif %}
+          {% if item.link %}
+          <p class="item-link"><a href="{{ item.link }}" target="_blank">{{ item.link }}</a></p>
+          {% endif %}
+          {% if item.quote %}
+          <blockquote class="item-quote">{{ item.quote }}</blockquote>
+          {% endif %}
+          {% if item.description %}
+          <div class="item-description">
+            {{ item.description | markdownify }}
+          </div>
+          {% endif %}
+        </div>
+        {% endfor %}
+      {% elsif section.layout == "text" %}
+        <div class="text-content">
+          {{ section.content | markdownify }}
+        </div>
+      {% endif %}
+    </section>
+
+    {% unless forloop.last %}
+    <hr class="section-divider">
+    {% endunless %}
+    {% endfor %}
+
+    <!-- Contact Links -->
+    <section class="content-section contact-section">
+      <h2 class="section-title">Connect</h2>
+      <div class="contact-links">
+        {% if site.email %}
+        <a href="mailto:{{ site.email }}">Email</a>
+        {% endif %}
+        {% if site.github_username %}
+        <a href="https://github.com/{{ site.github_username }}" target="_blank">GitHub</a>
+        {% endif %}
+        {% if site.linkedin_username %}
+        <a href="https://linkedin.com/in/{{ site.linkedin_username }}" target="_blank">LinkedIn</a>
+        {% endif %}
+      </div>
+    </section>
+  </div>
+</body>
+</html>

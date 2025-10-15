@@ -88,7 +88,8 @@ content:
 footer_show_references: true
 
 # Build settings
-remote_theme: sproogen/modern-resume-theme
+# Commenting out remote theme to use custom layout
+# remote_theme: sproogen/modern-resume-theme
 
 sass:
   sass_dir: _sass
@@ -96,7 +97,7 @@ sass:
 
 plugins:
   - jekyll-seo-tag
-  - jekyll-remote-theme
+  # - jekyll-remote-theme
 
 exclude:
   - Gemfile

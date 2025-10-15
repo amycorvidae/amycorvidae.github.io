@@ -1,0 +1,234 @@
+---
+---
+
+// Reset and base styles
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// Container
+.container {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+// Profile section
+.profile-section {
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+.profile-image {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 0;
+}
+
+// Header
+.header-section {
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+.header-section h1 {
+  font-size: 42px;
+  font-weight: bold;
+  margin-bottom: 0.25em;
+  color: #111;
+  line-height: 1.2;
+}
+
+.subtitle {
+  font-size: 18px;
+  color: #666;
+  font-weight: normal;
+}
+
+// Content sections
+.content-section {
+  margin-bottom: 2em;
+
+  p {
+    margin-bottom: 1em;
+    color: #444;
+  }
+
+  a {
+    color: #111;
+    text-decoration: underline;
+
+    &:hover {
+      color: #666;
+    }
+  }
+}
+
+.section-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 1em;
+  color: #111;
+}
+
+// Section divider
+.section-divider {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 3em 0;
+}
+
+// List items (Experience, Education, etc.)
+.list-item {
+  margin-bottom: 2em;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.item-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 0.25em;
+  color: #111;
+}
+
+.item-subtitle {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 0.25em;
+}
+
+.item-caption {
+  font-size: 14px;
+  color: #999;
+  margin-bottom: 0.5em;
+}
+
+.item-link {
+  font-size: 14px;
+  margin-bottom: 0.5em;
+
+  a {
+    color: #666;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.item-quote {
+  font-style: italic;
+  color: #666;
+  border-left: 3px solid #ddd;
+  padding-left: 1em;
+  margin: 1em 0;
+}
+
+.item-description {
+  margin-top: 0.5em;
+
+  ul {
+    list-style-position: outside;
+    margin-left: 1.5em;
+    margin-bottom: 1em;
+
+    li {
+      margin-bottom: 0.25em;
+    }
+  }
+}
+
+// Text content
+.text-content {
+  ul {
+    list-style-position: outside;
+    margin-left: 1.5em;
+    margin-bottom: 1em;
+
+    li {
+      margin-bottom: 0.5em;
+    }
+  }
+
+  strong {
+    font-weight: 600;
+    color: #111;
+  }
+}
+
+// Contact section
+.contact-section {
+  text-align: center;
+  margin-top: 3em;
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+  flex-wrap: wrap;
+  margin-top: 1em;
+
+  a {
+    color: #111;
+    text-decoration: none;
+    font-size: 16px;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  .container {
+    padding: 40px 20px;
+  }
+
+  .header-section h1 {
+    font-size: 32px;
+  }
+
+  .section-title {
+    font-size: 24px;
+  }
+
+  .contact-links {
+    gap: 1.5em;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-section h1 {
+    font-size: 28px;
+  }
+
+  .section-title {
+    font-size: 22px;
+  }
+
+  .contact-links {
+    flex-direction: column;
+    gap: 1em;
+  }
+}
