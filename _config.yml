@@ -109,3 +109,4 @@ exclude:
   - .jekyll-cache
   - gemfiles
   - README.md
+  - nul

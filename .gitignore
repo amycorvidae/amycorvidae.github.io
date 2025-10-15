@@ -1,0 +1,19 @@
+# Dependencies
+.bundle/
+vendor/
+
+# Build output
+_site/
+
+# IDE
+.idea/
+.vscode/
+
+# OS and problematic files
+.DS_Store
+nul
+
+# Jekyll
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
